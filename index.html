@@ -15,7 +15,7 @@
     content="Mobily DZ — smartphones, accessoires, nouveautés et quatre magasins à Alger."
   >
 
-  <title>Mobily DZ — Mobile Culture</title>
+  <title>Mobily DZ — Culture mobile</title>
 
   <link
     rel="icon"
@@ -116,7 +116,7 @@
         calc(42px + env(safe-area-inset-bottom));
     }
 
-    /* الشريط العلوي */
+    /* Navigation */
 
     .topline {
       min-height: 56px;
@@ -171,7 +171,7 @@
       transform: rotate(-8deg);
     }
 
-    /* الواجهة */
+    /* Hero */
 
     .hero {
       position: relative;
@@ -215,7 +215,7 @@
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.65);
       border-radius: 24px 24px 24px 5px;
-      background: #fff;
+      background: #ffffff;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
       transform: rotate(-3deg);
     }
@@ -224,8 +224,9 @@
       width: 100%;
       height: 100%;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 19px 19px 19px 3px;
+      background: #ffffff;
     }
 
     .hero-note {
@@ -274,7 +275,7 @@
     }
 
     .hero-title .dz::after {
-      content: "ALGERIA / 04 STORES";
+      content: "ALGÉRIE / 04 MAGASINS";
       margin-left: 14px;
       display: inline-block;
       color: #78787c;
@@ -325,7 +326,7 @@
     }
 
     .primary-action {
-      color: #fff;
+      color: #ffffff;
       background: var(--red);
     }
 
@@ -350,7 +351,7 @@
       stroke-linejoin: round;
     }
 
-    /* الشريط المتحرك */
+    /* Bande animée */
 
     .marquee {
       margin: 7px -15px 0;
@@ -379,7 +380,7 @@
       color: var(--red);
     }
 
-    /* الأقسام */
+    /* Sections */
 
     .section {
       margin-top: 20px;
@@ -420,7 +421,7 @@
       letter-spacing: 0.12em;
     }
 
-    /* المعرض */
+    /* Galerie */
 
     .lookbook-wrap {
       position: relative;
@@ -460,11 +461,7 @@
           rgba(238, 25, 35, 0.45),
           transparent 28%
         ),
-        linear-gradient(
-          135deg,
-          #212124,
-          #090909 65%
-        );
+        linear-gradient(135deg, #212124, #090909 65%);
       background-position: center;
       background-size: cover;
     }
@@ -491,7 +488,7 @@
       place-items: center;
       border: 1px solid rgba(255, 255, 255, 0.24);
       border-radius: 50%;
-      color: #fff;
+      color: #ffffff;
       background: rgba(0, 0, 0, 0.36);
       backdrop-filter: blur(8px);
       font-family: "Space Grotesk", sans-serif;
@@ -568,10 +565,11 @@
       border-color: var(--red);
     }
 
-    /* المتاجر */
+    /* Magasins */
 
     .stores {
       display: grid;
+      gap: 0;
       border-top: 1px solid var(--line);
     }
 
@@ -626,7 +624,7 @@
       color: var(--red);
     }
 
-    /* الاتصال */
+    /* Téléphones */
 
     .switchboard {
       overflow: hidden;
@@ -682,7 +680,7 @@
       white-space: nowrap;
     }
 
-    /* التواصل */
+    /* Réseaux sociaux */
 
     .social-ribbon {
       display: grid;
@@ -708,7 +706,7 @@
     }
 
     .social-link:hover {
-      color: #fff;
+      color: #ffffff;
       background: var(--red);
     }
 
@@ -739,6 +737,8 @@
     .web {
       color: var(--red);
     }
+
+    /* Pied de page */
 
     footer {
       padding: 53px 4px 5px;
@@ -777,7 +777,7 @@
       padding: 11px 17px;
       border: 1px solid rgba(238, 25, 35, 0.45);
       border-radius: 99px;
-      color: #fff;
+      color: #ffffff;
       background: rgba(8, 8, 8, 0.96);
       font-size: 10px;
       opacity: 0;
@@ -886,17 +886,14 @@
 <body>
   <main class="shell">
 
-    <nav
-      class="topline"
-      aria-label="Navigation principale"
-    >
+    <nav class="topline" aria-label="Navigation principale">
       <a class="wordmark" href="#top">
         <i></i>
         MOBILY DZ
       </a>
 
       <span class="edition">
-        Mobile culture · 2026
+        Culture mobile · 2026
       </span>
 
       <button
@@ -922,7 +919,6 @@
     </nav>
 
     <header class="hero" id="top">
-
       <div>
         <div class="hero-meta">
 
@@ -934,7 +930,7 @@
           </div>
 
           <p class="hero-note">
-            <strong>Connected life</strong>
+            <strong>Vie connectée</strong>
             Smartphones, accessoires et nouveautés
             sélectionnés pour vous.
           </p>
@@ -951,8 +947,8 @@
 
         <p class="hero-copy">
           <b>La technologie, plus proche de vous.</b>
-          Découvrez l’univers Mobily DZ et retrouvez
-          nos équipes dans quatre adresses à Alger.
+          Découvrez l’univers Mobily DZ et retrouvez nos
+          équipes dans quatre adresses à Alger.
         </p>
 
         <div class="action-rail">
@@ -984,35 +980,35 @@
 
         </div>
       </div>
-
     </header>
 
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
         <span>Smartphones</span>
         <span>Accessoires</span>
-        <span>New arrivals</span>
-        <span>Four stores</span>
+        <span>Nouveautés</span>
+        <span>Quatre magasins</span>
         <span>Mobily DZ</span>
 
         <span>Smartphones</span>
         <span>Accessoires</span>
-        <span>New arrivals</span>
-        <span>Four stores</span>
+        <span>Nouveautés</span>
+        <span>Quatre magasins</span>
         <span>Mobily DZ</span>
       </div>
     </div>
+
+    <!-- Sélection -->
 
     <section
       class="section"
       aria-labelledby="lookTitle"
     >
-
       <div class="section-head">
         <span class="section-number">01</span>
 
         <h2 id="lookTitle">
-          The mobile edit.
+          La sélection mobile.
         </h2>
 
         <p>
@@ -1030,12 +1026,15 @@
             style="--photo: url('images/product1.jpeg')"
           >
             <div class="look-content">
-              <small>Smartphones</small>
-              <h3>La nouvelle génération.</h3>
+              <small>Apple · Smartphone</small>
+
+              <h3>
+                iPhone 17 Pro. L’excellence en main.
+              </h3>
 
               <p>
-                Présentez ici votre modèle phare ou
-                votre dernier arrivage.
+                256 Go, double SIM, finition argent —
+                325 000 DA.
               </p>
             </div>
           </article>
@@ -1046,15 +1045,15 @@
             style="--photo: url('images/product2.jpeg')"
           >
             <div class="look-content">
-              <small>New drop</small>
+              <small>Samsung · Nouveauté</small>
 
               <h3>
-                Des performances qui comptent.
+                Galaxy S26 Ultra. Sans compromis.
               </h3>
 
               <p>
-                Une vitrine immersive pour vos nouveautés
-                et vos meilleures ventes.
+                Une expérience haut de gamme —
+                217 000 DA.
               </p>
             </div>
           </article>
@@ -1065,15 +1064,15 @@
             style="--photo: url('images/product3.jpeg')"
           >
             <div class="look-content">
-              <small>Accessories</small>
+              <small>Apple · Ordinateur</small>
 
               <h3>
-                Tout votre univers mobile.
+                MacBook Pro M5. La puissance créative.
               </h3>
 
               <p>
-                Protection, audio, charge et accessoires
-                indispensables.
+                16 Go de mémoire et 512 Go de stockage —
+                399 000 DA.
               </p>
             </div>
           </article>
@@ -1084,15 +1083,15 @@
             style="--photo: url('images/product4.jpeg')"
           >
             <div class="look-content">
-              <small>Mobily offers</small>
+              <small>DJI · Création</small>
 
               <h3>
-                Les offres à ne pas manquer.
+                Osmo Pocket 4P. Filmez autrement.
               </h3>
 
               <p>
-                Mettez en avant vos promotions avec
-                une image et un message court.
+                Ensemble complet pour le vlog —
+                204 000 DA.
               </p>
             </div>
           </article>
@@ -1100,13 +1099,11 @@
         </div>
 
         <div class="gallery-nav">
-
           <span class="counter">
             <b id="currentSlide">01</b> / 04
           </span>
 
           <div class="nav-buttons">
-
             <button
               id="previousButton"
               aria-label="Produit précédent"
@@ -1120,23 +1117,23 @@
             >
               →
             </button>
-
           </div>
         </div>
 
       </div>
     </section>
 
+    <!-- Magasins -->
+
     <section
       class="section"
       aria-labelledby="storesTitle"
     >
-
       <div class="section-head">
         <span class="section-number">02</span>
 
         <h2 id="storesTitle">
-          Find your store.
+          Trouvez votre magasin.
         </h2>
 
         <p>
@@ -1213,16 +1210,17 @@
       </div>
     </section>
 
+    <!-- Contact -->
+
     <section
       class="section"
       aria-labelledby="contactTitle"
     >
-
       <div class="section-head">
         <span class="section-number">03</span>
 
         <h2 id="contactTitle">
-          Direct lines.
+          Lignes directes.
         </h2>
 
         <p>
@@ -1233,12 +1231,11 @@
       <div class="switchboard">
 
         <div class="contact-pair">
-
           <a
             class="phone-link"
             href="tel:+213551436030"
           >
-            <small>Line 01</small>
+            <small>Ligne 01</small>
             <strong>0551 43 60 30</strong>
           </a>
 
@@ -1246,19 +1243,17 @@
             class="phone-link"
             href="tel:+213793478016"
           >
-            <small>Line 02</small>
+            <small>Ligne 02</small>
             <strong>0793 47 80 16</strong>
           </a>
-
         </div>
 
         <div class="contact-pair">
-
           <a
             class="phone-link"
             href="tel:+213558072546"
           >
-            <small>Line 03</small>
+            <small>Ligne 03</small>
             <strong>0558 07 25 46</strong>
           </a>
 
@@ -1266,19 +1261,17 @@
             class="phone-link"
             href="tel:+213774705946"
           >
-            <small>Line 04</small>
+            <small>Ligne 04</small>
             <strong>0774 70 59 46</strong>
           </a>
-
         </div>
 
         <div class="contact-pair">
-
           <a
             class="phone-link"
             href="tel:+213553817939"
           >
-            <small>Line 05</small>
+            <small>Ligne 05</small>
             <strong>0553 81 79 39</strong>
           </a>
 
@@ -1286,25 +1279,25 @@
             class="phone-link"
             href="tel:+213775138855"
           >
-            <small>Line 06</small>
+            <small>Ligne 06</small>
             <strong>0775 13 88 55</strong>
           </a>
-
         </div>
 
       </div>
     </section>
 
+    <!-- Réseaux sociaux -->
+
     <section
       class="section"
       aria-labelledby="socialTitle"
     >
-
       <div class="section-head">
         <span class="section-number">04</span>
 
         <h2 id="socialTitle">
-          Stay connected.
+          Restez connectés.
         </h2>
 
         <p>
@@ -1335,11 +1328,7 @@
               rx="5"
             ></rect>
 
-            <circle
-              cx="12"
-              cy="12"
-              r="4"
-            ></circle>
+            <circle cx="12" cy="12" r="4"></circle>
 
             <circle
               cx="17.4"
@@ -1401,19 +1390,21 @@
             stroke-width="1.8"
           >
             <circle cx="12" cy="12" r="9"></circle>
+
             <path d="M3 12h18"></path>
+
             <path d="M12 3c3 3.4 3 14.6 0 18"></path>
+
             <path d="M12 3c-3 3.4-3 14.6 0 18"></path>
           </svg>
 
-          <span>Website</span>
+          <span>Site officiel</span>
         </a>
 
       </div>
     </section>
 
     <footer>
-
       <div>
         <strong>Mobily DZ</strong>
 
@@ -1423,7 +1414,6 @@
       </div>
 
       <span class="footer-mark">M.</span>
-
     </footer>
 
   </main>
@@ -1437,9 +1427,7 @@
       document.getElementById("lookbook");
 
     const slides =
-      Array.from(
-        document.querySelectorAll(".look-card")
-      );
+      [...document.querySelectorAll(".look-card")];
 
     const currentSlide =
       document.getElementById("currentSlide");
@@ -1482,21 +1470,15 @@
       }, 5200);
     }
 
-    previousButton.addEventListener(
-      "click",
-      () => {
-        showSlide(activeIndex - 1);
-        restart();
-      }
-    );
+    previousButton.addEventListener("click", () => {
+      showSlide(activeIndex - 1);
+      restart();
+    });
 
-    nextButton.addEventListener(
-      "click",
-      () => {
-        showSlide(activeIndex + 1);
-        restart();
-      }
-    );
+    nextButton.addEventListener("click", () => {
+      showSlide(activeIndex + 1);
+      restart();
+    });
 
     gallery.addEventListener(
       "scroll",
@@ -1536,37 +1518,37 @@
       }
     );
 
-    shareButton.addEventListener(
-      "click",
-      async () => {
-        const data = {
-          title: "Mobily DZ",
-          text:
-            "Découvrez Mobily DZ et ses magasins.",
-          url: location.href
-        };
+    shareButton.addEventListener("click", async () => {
+      const data = {
+        title: "Mobily DZ",
+        text:
+          "Découvrez Mobily DZ, ses produits et ses magasins.",
+        url: window.location.href
+      };
 
-        try {
-          if (navigator.share) {
-            await navigator.share(data);
-          } else {
-            await navigator.clipboard.writeText(
-              location.href
-            );
+      try {
+        if (navigator.share) {
+          await navigator.share(data);
+        } else {
+          await navigator.clipboard.writeText(
+            window.location.href
+          );
 
-            toast.classList.add("show");
+          toast.classList.add("show");
 
-            setTimeout(() => {
-              toast.classList.remove("show");
-            }, 1800);
-          }
-        } catch (error) {
-          if (error.name !== "AbortError") {
-            console.error(error);
-          }
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 1800);
+        }
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          console.error(
+            "Le partage est impossible.",
+            error
+          );
         }
       }
-    );
+    });
 
     document.addEventListener(
       "visibilitychange",
