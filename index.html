@@ -8,14 +8,14 @@
     content="width=device-width, initial-scale=1, viewport-fit=cover"
   >
 
-  <meta name="theme-color" content="#080808">
+  <meta name="theme-color" content="#070707">
 
   <meta
     name="description"
-    content="Mobily DZ — smartphones, accessoires et technologie. Retrouvez nos magasins à Belfort, El Biar, Dely Brahim et City Center."
+    content="Mobily DZ — smartphones, accessoires, nouveautés et quatre magasins à Alger."
   >
 
-  <title>Mobily DZ | Smartphones & Technologie</title>
+  <title>Mobily DZ — Mobile Culture</title>
 
   <link
     rel="icon"
@@ -32,22 +32,20 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
   <style>
     :root {
-      --black: #050505;
-      --panel: #0c0c0d;
-      --panel-soft: #131315;
-      --red: #ed1c24;
-      --red-light: #ff5258;
-      --white: #ffffff;
-      --muted: #a8a8ac;
-      --line: rgba(255, 255, 255, 0.10);
-      --red-line: rgba(237, 28, 36, 0.30);
-      --radius: 28px;
+      --ink: #070707;
+      --paper: #f2f0eb;
+      --red: #ee1923;
+      --red-dark: #98080f;
+      --silver: #b8b9bd;
+      --muted: #8d8d91;
+      --line: rgba(255, 255, 255, 0.13);
+      --soft: rgba(255, 255, 255, 0.055);
     }
 
     * {
@@ -57,32 +55,27 @@
     }
 
     html {
-      background: var(--black);
+      background: var(--ink);
       scroll-behavior: smooth;
     }
 
     body {
       min-height: 100vh;
       overflow-x: hidden;
-      color: var(--white);
+      color: var(--paper);
       background:
         radial-gradient(
-          circle at 50% -8%,
-          rgba(237, 28, 36, 0.19),
-          transparent 400px
+          circle at 89% 7%,
+          rgba(238, 25, 35, 0.16),
+          transparent 25rem
         ),
         radial-gradient(
-          circle at 105% 48%,
-          rgba(237, 28, 36, 0.09),
-          transparent 330px
+          circle at -12% 55%,
+          rgba(238, 25, 35, 0.09),
+          transparent 28rem
         ),
-        linear-gradient(
-          160deg,
-          #090909 0%,
-          #020202 56%,
-          #100506 100%
-        );
-      font-family: "Manrope", sans-serif;
+        #070707;
+      font-family: "DM Sans", sans-serif;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -92,32 +85,9 @@
       inset: 0;
       z-index: -2;
       pointer-events: none;
-      opacity: 0.18;
+      opacity: 0.36;
       background-image:
-        linear-gradient(
-          rgba(255, 255, 255, 0.08) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.08) 1px,
-          transparent 1px
-        );
-      background-size: 48px 48px;
-      mask-image: linear-gradient(to bottom, #000, transparent 72%);
-      -webkit-mask-image:
-        linear-gradient(to bottom, #000, transparent 72%);
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      opacity: 0.25;
-      background-image:
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.045'/%3E%3C/svg%3E");
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
     }
 
     a {
@@ -130,356 +100,249 @@
       font: inherit;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
     svg {
-      width: 23px;
-      height: 23px;
+      width: 22px;
+      height: 22px;
       display: block;
     }
 
-    .page {
+    .shell {
       position: relative;
       width: min(100%, 650px);
-      margin: auto;
+      margin: 0 auto;
       padding:
-        max(28px, env(safe-area-inset-top))
+        max(18px, env(safe-area-inset-top))
         15px
-        calc(48px + env(safe-area-inset-bottom));
+        calc(42px + env(safe-area-inset-bottom));
     }
 
-    .red-orb {
-      position: fixed;
-      z-index: -1;
-      width: 360px;
-      height: 360px;
-      border: 1px solid rgba(237, 28, 36, 0.11);
+    /* الشريط العلوي */
+
+    .topline {
+      min-height: 56px;
+      padding: 0 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    .wordmark i {
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      pointer-events: none;
+      background: var(--red);
+      box-shadow: 0 0 16px var(--red);
     }
 
-    .red-orb::before,
-    .red-orb::after {
-      content: "";
-      position: absolute;
-      border: 1px solid rgba(237, 28, 36, 0.07);
-      border-radius: inherit;
+    .edition {
+      color: #727276;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
     }
 
-    .red-orb::before {
-      inset: 38px;
-    }
-
-    .red-orb::after {
-      inset: 78px;
-    }
-
-    .orb-one {
-      top: -220px;
-      right: -220px;
-    }
-
-    .orb-two {
-      bottom: -250px;
-      left: -220px;
-    }
-
-    /* زر المشاركة */
-
-    .share-button {
-      position: absolute;
-      top: max(22px, env(safe-area-inset-top));
-      right: 19px;
-      z-index: 20;
-      width: 46px;
-      height: 46px;
+    .share {
+      width: 42px;
+      height: 42px;
       display: grid;
       place-items: center;
       border: 1px solid var(--line);
       border-radius: 50%;
-      color: var(--red-light);
-      background: rgba(10, 10, 11, 0.78);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.38);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      color: var(--paper);
+      background: transparent;
       cursor: pointer;
       transition: 0.25s ease;
     }
 
-    .share-button:hover {
-      transform: translateY(-3px);
-      border-color: var(--red);
-      box-shadow: 0 0 28px rgba(237, 28, 36, 0.20);
+    .share:hover {
+      color: var(--red);
+      border-color: rgba(238, 25, 35, 0.55);
+      transform: rotate(-8deg);
     }
 
-    /* واجهة الشعار */
+    /* الواجهة */
 
     .hero {
-      padding: 23px 22px 30px;
-      text-align: center;
-      animation: reveal 0.7s ease both;
-    }
-
-    .logo-stage {
       position: relative;
-      width: 166px;
-      height: 166px;
-      margin: 10px auto 26px;
-      display: grid;
-      place-items: center;
+      min-height: 610px;
+      padding: 32px 4px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      animation: enter 0.8s ease both;
     }
 
-    .logo-stage::before {
+    .hero::after {
       content: "";
       position: absolute;
-      inset: -5px;
-      border: 1px solid rgba(237, 28, 36, 0.25);
+      top: 70px;
+      right: -110px;
+      width: 310px;
+      height: 310px;
+      border: 1px solid rgba(238, 25, 35, 0.2);
       border-radius: 50%;
-      background:
-        conic-gradient(
-          from 15deg,
-          transparent 0 14%,
-          var(--red) 22%,
-          transparent 31% 66%,
-          #fff 72%,
-          transparent 79%
-        );
-      filter: drop-shadow(
-        0 0 10px rgba(237, 28, 36, 0.30)
-      );
-      animation: rotate 11s linear infinite;
-    }
-
-    .logo-stage::after {
-      content: "M";
-      position: absolute;
-      right: -5px;
-      bottom: 6px;
-      z-index: 5;
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 50%;
-      color: white;
-      background: var(--red);
-      box-shadow: 0 0 25px rgba(237, 28, 36, 0.40);
-      font-family: "Syne", sans-serif;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .logo-frame {
-      position: relative;
-      z-index: 3;
-      width: 143px;
-      height: 143px;
-      padding: 4px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.78);
-      border-radius: 50%;
-      background:
-        linear-gradient(
-          145deg,
-          #ffffff,
-          #7b7b7d,
-          #ef1d25
-        );
       box-shadow:
-        0 25px 65px rgba(0, 0, 0, 0.70),
-        0 0 42px rgba(237, 28, 36, 0.14);
+        0 0 0 34px rgba(238, 25, 35, 0.025),
+        0 0 0 70px rgba(255, 255, 255, 0.018);
+      pointer-events: none;
     }
 
-    .logo-frame img {
+    .hero-meta {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .logo-chip {
+      position: relative;
+      width: 88px;
+      height: 88px;
+      padding: 5px;
+      flex: 0 0 auto;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 24px 24px 24px 5px;
+      background: #fff;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+      transform: rotate(-3deg);
+    }
+
+    .logo-chip img {
       width: 100%;
       height: 100%;
+      display: block;
       object-fit: cover;
-      border-radius: 50%;
-      background: #fff;
+      border-radius: 19px 19px 19px 3px;
     }
 
-    .eyebrow {
-      margin-bottom: 10px;
-      color: var(--red-light);
+    .hero-note {
+      max-width: 180px;
+      padding-top: 7px;
+      color: #aaa9ad;
       font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.26em;
+      line-height: 1.55;
+      text-align: right;
+    }
+
+    .hero-note strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--red);
+      font-size: 9px;
+      letter-spacing: 0.19em;
       text-transform: uppercase;
     }
 
-    h1,
-    h2 {
-      font-family: "Syne", sans-serif;
+    .hero-title {
+      position: relative;
+      z-index: 2;
+      margin: 42px 0 20px;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      line-height: 0.79;
+      letter-spacing: -0.075em;
+      text-transform: uppercase;
     }
 
-    h1 {
-      color: transparent;
-      background:
-        linear-gradient(
-          105deg,
-          #ffffff 10%,
-          #ffffff 54%,
-          #ff4a50 96%
-        );
-      background-clip: text;
-      -webkit-background-clip: text;
-      font-size: clamp(49px, 15vw, 76px);
-      font-weight: 800;
-      line-height: 0.90;
-      letter-spacing: -0.065em;
+    .hero-title .mobily {
+      display: block;
+      max-width: 100%;
+      font-size: clamp(58px, 17vw, 106px);
+      white-space: nowrap;
     }
 
-    h1 span {
+    .hero-title .dz {
+      width: fit-content;
+      margin-top: 13px;
+      display: block;
       color: var(--red);
+      font-size: clamp(50px, 14vw, 88px);
+      letter-spacing: -0.045em;
     }
 
-    .hero-text {
-      max-width: 410px;
-      margin: 18px auto 20px;
-      color: var(--muted);
+    .hero-title .dz::after {
+      content: "ALGERIA / 04 STORES";
+      margin-left: 14px;
+      display: inline-block;
+      color: #78787c;
+      font-family: "DM Sans", sans-serif;
+      font-size: 8px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 0.16em;
+      vertical-align: middle;
+      white-space: pre;
+    }
+
+    .hero-bottom {
+      display: grid;
+      gap: 19px;
+    }
+
+    .hero-copy {
+      max-width: 405px;
+      color: #9b9a9f;
       font-size: 13px;
       line-height: 1.7;
     }
 
-    .status-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .hero-copy b {
+      color: var(--paper);
+      font-weight: 500;
+    }
+
+    .action-rail {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
       gap: 8px;
     }
 
-    .status-pill {
-      padding: 9px 12px;
-      display: inline-flex;
+    .primary-action,
+    .secondary-action {
+      min-height: 66px;
+      padding: 0 17px;
+      display: flex;
       align-items: center;
-      gap: 7px;
-      border: 1px solid var(--line);
-      border-radius: 99px;
-      color: #c8c8cb;
-      background: rgba(255, 255, 255, 0.025);
-      font-size: 10px;
+      justify-content: space-between;
+      gap: 12px;
+      border-radius: 6px 22px 22px 22px;
+      font-size: 12px;
       font-weight: 600;
-    }
-
-    .status-pill i {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--red);
-      box-shadow: 0 0 11px var(--red);
-    }
-
-    /* الأقسام */
-
-    .panel {
-      position: relative;
-      padding: 20px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background:
-        linear-gradient(
-          145deg,
-          rgba(20, 20, 22, 0.96),
-          rgba(5, 5, 6, 0.99)
-        );
-      box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.46),
-        inset 0 1px rgba(255, 255, 255, 0.04);
-    }
-
-    .panel::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 14%;
-      right: 14%;
-      height: 1px;
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          var(--red),
-          transparent
-        );
-      box-shadow: 0 0 14px var(--red);
-    }
-
-    /* الأزرار الرئيسية */
-
-    .main-actions {
-      margin-bottom: 15px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      animation: reveal 0.7s 0.08s ease both;
-    }
-
-    .action-card {
-      position: relative;
-      min-height: 151px;
-      padding: 17px;
-      display: grid;
-      align-content: space-between;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 23px;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(24, 24, 26, 0.96),
-          rgba(7, 7, 8, 0.99)
-        );
       transition: 0.25s ease;
     }
 
-    .action-card.primary {
-      border-color: var(--red-line);
-      background:
-        linear-gradient(
-          145deg,
-          rgba(103, 12, 16, 0.48),
-          rgba(8, 7, 8, 0.98)
-        );
+    .primary-action {
+      color: #fff;
+      background: var(--red);
     }
 
-    .action-card::after {
-      content: "";
-      position: absolute;
-      width: 105px;
-      height: 105px;
-      right: -55px;
-      bottom: -58px;
-      border: 1px solid rgba(237, 28, 36, 0.16);
-      border-radius: 50%;
+    .secondary-action {
+      border: 1px solid var(--line);
+      background: var(--soft);
     }
 
-    .action-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(237, 28, 36, 0.58);
-      box-shadow:
-        0 18px 36px rgba(0, 0, 0, 0.40),
-        0 0 24px rgba(237, 28, 36, 0.09);
+    .primary-action:hover,
+    .secondary-action:hover {
+      transform: translateY(-3px);
     }
 
-    .icon-box {
-      width: 50px;
-      height: 50px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--red-line);
-      border-radius: 15px;
-      color: var(--red-light);
-      background: rgba(237, 28, 36, 0.08);
-    }
-
-    .icon-box svg,
-    .branch-icon svg,
-    .phone-icon svg {
+    .primary-action svg,
+    .secondary-action svg {
+      width: 19px;
+      height: 19px;
       fill: none;
       stroke: currentColor;
       stroke-width: 1.8;
@@ -487,462 +350,436 @@
       stroke-linejoin: round;
     }
 
-    .action-label {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      gap: 3px;
+    /* الشريط المتحرك */
+
+    .marquee {
+      margin: 7px -15px 0;
+      padding: 12px 0;
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #0c0c0d;
     }
 
-    .action-label small {
-      color: var(--muted);
-      font-size: 9px;
-    }
-
-    .action-label strong {
-      font-size: 14px;
-      line-height: 1.3;
-    }
-
-    .arrow {
-      position: absolute;
-      top: 17px;
-      right: 16px;
-      color: var(--red-light);
-      font-size: 17px;
-    }
-
-    .section-heading {
-      margin-bottom: 17px;
+    .marquee-track {
+      width: max-content;
       display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 14px;
+      gap: 28px;
+      color: #c8c7ca;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      animation: marquee 18s linear infinite;
     }
 
-    .section-heading span {
-      color: var(--red-light);
+    .marquee-track span::before {
+      content: "✦";
+      margin-right: 28px;
+      color: var(--red);
+    }
+
+    /* الأقسام */
+
+    .section {
+      margin-top: 20px;
+      padding: 25px 4px 8px;
+      border-top: 1px solid var(--line);
+      animation: enter 0.7s ease both;
+    }
+
+    .section-head {
+      margin-bottom: 21px;
+      display: grid;
+      grid-template-columns: 42px 1fr auto;
+      align-items: end;
+      gap: 12px;
+    }
+
+    .section-number {
+      color: var(--red);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.13em;
+    }
+
+    .section-head h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(28px, 8vw, 45px);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .section-head p {
+      max-width: 108px;
+      color: #75757a;
+      font-size: 8px;
+      line-height: 1.45;
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    /* المعرض */
+
+    .lookbook-wrap {
+      position: relative;
+    }
+
+    .lookbook {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 86%;
+      gap: 10px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .lookbook::-webkit-scrollbar {
+      display: none;
+    }
+
+    .look-card {
+      position: relative;
+      min-height: 470px;
+      overflow: hidden;
+      scroll-snap-align: center;
+      border: 1px solid var(--line);
+      border-radius: 34px 8px 34px 34px;
+      background:
+        linear-gradient(
+          to top,
+          rgba(4, 4, 4, 0.98) 0%,
+          rgba(4, 4, 4, 0.15) 58%,
+          rgba(4, 4, 4, 0.04)
+        ),
+        var(--photo),
+        radial-gradient(
+          circle at 70% 25%,
+          rgba(238, 25, 35, 0.45),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #212124,
+          #090909 65%
+        );
+      background-position: center;
+      background-size: cover;
+    }
+
+    .look-card::before {
+      content: attr(data-index);
+      position: absolute;
+      top: 16px;
+      left: 18px;
+      color: rgba(255, 255, 255, 0.62);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+    }
+
+    .look-card::after {
+      content: "M";
+      position: absolute;
+      top: 13px;
+      right: 13px;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 50%;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.36);
+      backdrop-filter: blur(8px);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .look-content {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 90px 22px 24px;
+    }
+
+    .look-content small {
+      color: var(--red);
       font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 0.22em;
+      font-weight: 700;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
     }
 
-    .section-heading h2 {
-      margin-top: 5px;
-      font-size: 28px;
-      line-height: 1.05;
+    .look-content h3 {
+      max-width: 285px;
+      margin: 7px 0 9px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 31px;
+      line-height: 0.98;
       letter-spacing: -0.045em;
     }
 
-    /* معرض المنتجات */
-
-    .gallery-section {
-      animation: reveal 0.7s 0.14s ease both;
+    .look-content p {
+      max-width: 300px;
+      color: #a1a0a5;
+      font-size: 10px;
+      line-height: 1.55;
     }
 
-    .gallery-controls {
+    .gallery-nav {
+      margin-top: 12px;
       display: flex;
-      gap: 6px;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .gallery-controls button {
-      width: 36px;
-      height: 36px;
+    .counter {
+      color: #75757a;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+    }
+
+    .counter b {
+      color: var(--paper);
+      font-size: 16px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 7px;
+    }
+
+    .nav-buttons button {
+      width: 43px;
+      height: 43px;
       border: 1px solid var(--line);
       border-radius: 50%;
-      color: var(--red-light);
-      background: rgba(255, 255, 255, 0.025);
+      background: transparent;
       cursor: pointer;
       transition: 0.2s;
     }
 
-    .gallery-controls button:hover {
+    .nav-buttons button:hover {
+      color: var(--red);
       border-color: var(--red);
-      background: rgba(237, 28, 36, 0.10);
     }
 
-    .product-gallery {
+    /* المتاجر */
+
+    .stores {
       display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: 79%;
+      border-top: 1px solid var(--line);
+    }
+
+    .store-row {
+      min-height: 96px;
+      padding: 14px 2px;
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      align-items: center;
       gap: 12px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      overscroll-behavior-inline: contain;
-      scrollbar-width: none;
+      border-bottom: 1px solid var(--line);
+      transition: 0.25s ease;
     }
 
-    .product-gallery::-webkit-scrollbar {
-      display: none;
-    }
-
-    .product-card {
-      position: relative;
-      min-height: 355px;
-      overflow: hidden;
-      scroll-snap-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.11);
-      border-radius: 23px;
-      background-color: #111;
-      background-image:
-        linear-gradient(
-          to top,
-          rgba(2, 2, 2, 0.98) 0%,
-          rgba(2, 2, 2, 0.20) 60%,
-          rgba(2, 2, 2, 0.08) 100%
-        ),
-        var(--image),
-        radial-gradient(
-          circle at 50% 30%,
-          rgba(237, 28, 36, 0.18),
-          transparent 45%
-        ),
-        linear-gradient(
-          135deg,
-          #171719,
-          #050505
-        );
-      background-position: center;
-      background-size: cover;
-      transition: 0.3s ease;
-    }
-
-    .product-card::before {
-      content: "MOBILY DZ";
-      position: absolute;
-      top: 18px;
-      left: 17px;
-      padding: 7px 10px;
-      border: 1px solid var(--red-line);
-      border-radius: 99px;
-      color: #fff;
-      background: rgba(110, 8, 12, 0.72);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      font-size: 8px;
-      font-weight: 800;
-      letter-spacing: 0.17em;
-    }
-
-    .product-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(237, 28, 36, 0.48);
-    }
-
-    .product-info {
-      position: absolute;
-      inset: auto 0 0;
-      padding: 72px 18px 19px;
-      display: grid;
-      gap: 5px;
+    .store-row:hover {
+      padding-left: 9px;
       background:
         linear-gradient(
-          transparent,
-          rgba(2, 2, 2, 0.99)
+          90deg,
+          rgba(238, 25, 35, 0.09),
+          transparent
         );
     }
 
-    .product-info small {
-      color: var(--red-light);
+    .store-index {
+      color: var(--red);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 11px;
+    }
+
+    .store-name strong {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 22px;
+      letter-spacing: -0.035em;
+    }
+
+    .store-name small {
+      color: #77777b;
       font-size: 9px;
-      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .store-go {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--red);
+    }
+
+    /* الاتصال */
+
+    .switchboard {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px 30px 30px 30px;
+      background: #0d0d0e;
+    }
+
+    .contact-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-pair + .contact-pair {
+      border-top: 1px solid var(--line);
+    }
+
+    .phone-link {
+      min-width: 0;
+      min-height: 82px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3px;
+      transition: 0.2s ease;
+    }
+
+    .phone-link + .phone-link {
+      border-left: 1px solid var(--line);
+    }
+
+    .phone-link:hover {
+      background: var(--red);
+    }
+
+    .phone-link small {
+      color: #76767b;
+      font-size: 8px;
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
 
-    .product-info strong {
-      font-family: "Syne", sans-serif;
-      font-size: 23px;
-      line-height: 1.1;
+    .phone-link:hover small {
+      color: rgba(255, 255, 255, 0.72);
     }
 
-    .product-info p {
-      color: var(--muted);
-      font-size: 10px;
-      line-height: 1.5;
-    }
-
-    .gallery-dots {
-      min-height: 7px;
-      margin-top: 16px;
-      display: flex;
-      justify-content: center;
-      gap: 7px;
-    }
-
-    .gallery-dots i {
-      width: 6px;
-      height: 6px;
-      border-radius: 20px;
-      background: #555559;
-      transition: 0.25s;
-    }
-
-    .gallery-dots i.active {
-      width: 25px;
-      background:
-        linear-gradient(
-          90deg,
-          var(--red),
-          #fff
-        );
-      box-shadow: 0 0 12px rgba(237, 28, 36, 0.50);
-    }
-
-    /* الفروع */
-
-    .branches-section {
-      margin-top: 15px;
-      animation: reveal 0.7s 0.20s ease both;
-    }
-
-    .branch-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 9px;
-    }
-
-    .branch-card {
-      position: relative;
-      min-height: 126px;
-      padding: 15px;
-      display: grid;
-      align-content: space-between;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.026);
-      transition: 0.25s ease;
-    }
-
-    .branch-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--red-line);
-      background: rgba(237, 28, 36, 0.055);
-    }
-
-    .branch-icon {
-      width: 43px;
-      height: 43px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--red-line);
-      border-radius: 13px;
-      color: var(--red-light);
-      background: rgba(237, 28, 36, 0.07);
-    }
-
-    .branch-info {
-      display: grid;
-      gap: 3px;
-    }
-
-    .branch-info strong {
-      font-size: 13px;
-    }
-
-    .branch-info small {
-      color: var(--muted);
-      font-size: 9px;
-    }
-
-    .branch-arrow {
-      position: absolute;
-      top: 15px;
-      right: 14px;
-      color: var(--red-light);
-    }
-
-    /* أرقام الهاتف */
-
-    .phones-section {
-      margin-top: 15px;
-      animation: reveal 0.7s 0.25s ease both;
-    }
-
-    .phone-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-    }
-
-    .phone-card {
-      min-height: 72px;
-      padding: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      background: rgba(255, 255, 255, 0.025);
-      transition: 0.22s ease;
-    }
-
-    .phone-card:hover {
-      border-color: var(--red-line);
-      background: rgba(237, 28, 36, 0.06);
-      transform: translateY(-2px);
-    }
-
-    .phone-icon {
-      width: 38px;
-      height: 38px;
-      flex: 0 0 auto;
-      display: grid;
-      place-items: center;
-      border-radius: 12px;
-      color: var(--red-light);
-      background: rgba(237, 28, 36, 0.08);
-    }
-
-    .phone-icon svg {
-      width: 19px;
-      height: 19px;
-    }
-
-    .phone-card span {
-      display: grid;
-      gap: 2px;
-    }
-
-    .phone-card small {
-      color: var(--muted);
-      font-size: 8px;
-    }
-
-    .phone-card strong {
-      font-size: 11px;
-      white-space: nowrap;
-    }
-
-    /* مواقع التواصل */
-
-    .social-section {
-      margin-top: 15px;
-      animation: reveal 0.7s 0.30s ease both;
-    }
-
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 9px;
-    }
-
-    .social-card {
-      position: relative;
-      min-height: 126px;
-      padding: 15px;
-      display: grid;
-      align-content: space-between;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.025);
-      transition: 0.25s ease;
-    }
-
-    .social-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--red-line);
-      background: rgba(255, 255, 255, 0.045);
-    }
-
-    .social-icon {
-      width: 43px;
-      height: 43px;
-      display: grid;
-      place-items: center;
-      border-radius: 13px;
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .social-icon svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .instagram .social-icon {
-      color: #ff5d9e;
-    }
-
-    .tiktok .social-icon {
-      color: #ffffff;
-    }
-
-    .facebook .social-icon {
-      color: #5e9cff;
-    }
-
-    .website .social-icon {
-      color: var(--red-light);
-    }
-
-    .social-info {
-      display: grid;
-      gap: 3px;
-    }
-
-    .social-info strong {
-      font-size: 13px;
-    }
-
-    .social-info small {
+    .phone-link strong {
       overflow: hidden;
-      color: var(--muted);
-      font-size: 9px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(11px, 3.2vw, 14px);
       text-overflow: ellipsis;
       white-space: nowrap;
     }
 
-    .social-arrow {
-      position: absolute;
-      top: 15px;
-      right: 14px;
-      color: var(--red-light);
+    /* التواصل */
+
+    .social-ribbon {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px 8px 28px 28px;
     }
 
-    /* نهاية الصفحة */
+    .social-link {
+      min-height: 105px;
+      padding: 13px 6px;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      gap: 11px;
+      text-align: center;
+      transition: 0.25s ease;
+    }
+
+    .social-link + .social-link {
+      border-left: 1px solid var(--line);
+    }
+
+    .social-link:hover {
+      color: #fff;
+      background: var(--red);
+    }
+
+    .social-link svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .social-link span {
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .instagram {
+      color: #ff5c9b;
+    }
+
+    .tiktok {
+      color: #f4f2ee;
+    }
+
+    .facebook {
+      color: #5b97ff;
+    }
+
+    .web {
+      color: var(--red);
+    }
 
     footer {
-      padding: 37px 0 5px;
-      text-align: center;
-      color: #77777c;
-      animation: reveal 0.7s 0.34s ease both;
+      padding: 53px 4px 5px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 20px;
     }
 
-    .footer-line {
-      width: 36px;
-      height: 2px;
-      margin: 0 auto 13px;
-      background: var(--red);
-      box-shadow: 0 0 12px rgba(237, 28, 36, 0.65);
+    footer strong {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 21px;
+      letter-spacing: -0.04em;
     }
 
-    footer p {
-      margin-bottom: 5px;
-      color: #eeeef0;
-      font-family: "Syne", sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    footer span {
-      font-size: 7px;
-      letter-spacing: 0.28em;
+    footer small {
+      color: #6f6f73;
+      font-size: 8px;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
+    }
+
+    .footer-mark {
+      color: var(--red);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 37px;
+      line-height: 0.8;
     }
 
     .toast {
       position: fixed;
       left: 50%;
-      bottom: calc(22px + env(safe-area-inset-bottom));
-      z-index: 60;
+      bottom: calc(20px + env(safe-area-inset-bottom));
+      z-index: 50;
       padding: 11px 17px;
-      border: 1px solid var(--red-line);
+      border: 1px solid rgba(238, 25, 35, 0.45);
       border-radius: 99px;
       color: #fff;
-      background: rgba(13, 13, 14, 0.97);
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
-      font-size: 11px;
+      background: rgba(8, 8, 8, 0.96);
+      font-size: 10px;
       opacity: 0;
       pointer-events: none;
       transform: translate(-50%, 18px);
@@ -954,7 +791,7 @@
       transform: translate(-50%, 0);
     }
 
-    @keyframes reveal {
+    @keyframes enter {
       from {
         opacity: 0;
         transform: translateY(16px);
@@ -966,76 +803,71 @@
       }
     }
 
-    @keyframes rotate {
+    @keyframes marquee {
       to {
-        transform: rotate(360deg);
+        transform: translateX(-50%);
       }
     }
 
-    @media (min-width: 720px) {
-      .page {
-        padding-top: 52px;
-      }
-
-      .product-gallery {
-        grid-auto-columns: calc((100% - 24px) / 3);
-      }
-
-      .product-card {
-        min-height: 325px;
+    @media (min-width: 700px) {
+      .lookbook {
+        grid-auto-columns: 57%;
       }
     }
 
     @media (max-width: 390px) {
-      .page {
+      .shell {
         padding-inline: 10px;
       }
 
+      .marquee {
+        margin-inline: -10px;
+      }
+
       .hero {
-        padding-inline: 18px;
+        min-height: 570px;
       }
 
-      .panel {
-        padding: 16px;
-        border-radius: 24px;
+      .hero-title .mobily {
+        font-size: clamp(55px, 18vw, 69px);
       }
 
-      .product-gallery {
-        grid-auto-columns: 84%;
+      .hero-title .dz {
+        font-size: clamp(45px, 15vw, 58px);
       }
 
-      .product-card {
-        min-height: 330px;
+      .hero-title .dz::after {
+        margin-left: 9px;
+        font-size: 6px;
       }
 
-      .action-card {
-        min-height: 143px;
-        padding: 14px;
+      .action-rail {
+        grid-template-columns: 1fr;
       }
 
-      .branch-grid,
-      .social-grid {
-        gap: 8px;
+      .secondary-action {
+        border-radius: 22px 22px 6px 22px;
       }
 
-      .branch-card,
-      .social-card {
-        min-height: 120px;
-        padding: 13px;
+      .look-card {
+        min-height: 430px;
       }
 
-      .phone-card {
-        padding: 10px 8px;
-        gap: 7px;
+      .section-head p {
+        display: none;
       }
 
-      .phone-icon {
-        width: 34px;
-        height: 34px;
+      .section-head {
+        grid-template-columns: 36px 1fr;
       }
 
-      .phone-card strong {
-        font-size: 10px;
+      .social-link {
+        min-height: 92px;
+        padding-inline: 3px;
+      }
+
+      .social-link span {
+        font-size: 6.5px;
       }
     }
 
@@ -1052,603 +884,565 @@
 </head>
 
 <body>
-  <div class="red-orb orb-one"></div>
-  <div class="red-orb orb-two"></div>
+  <main class="shell">
 
-  <main class="page">
-
-    <button
-      class="share-button"
-      id="shareButton"
-      aria-label="Partager le site"
+    <nav
+      class="topline"
+      aria-label="Navigation principale"
     >
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+      <a class="wordmark" href="#top">
+        <i></i>
+        MOBILY DZ
+      </a>
+
+      <span class="edition">
+        Mobile culture · 2026
+      </span>
+
+      <button
+        class="share"
+        id="shareButton"
+        aria-label="Partager la page"
       >
-        <circle cx="18" cy="5" r="2.5"></circle>
-        <circle cx="6" cy="12" r="2.5"></circle>
-        <circle cx="18" cy="19" r="2.5"></circle>
-        <path d="m8.2 10.8 7.6-4.5"></path>
-        <path d="m8.2 13.2 7.6 4.5"></path>
-      </svg>
-    </button>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="18" cy="5" r="2.5"></circle>
+          <circle cx="6" cy="12" r="2.5"></circle>
+          <circle cx="18" cy="19" r="2.5"></circle>
+          <path d="m8.2 10.8 7.6-4.5"></path>
+          <path d="m8.2 13.2 7.6 4.5"></path>
+        </svg>
+      </button>
+    </nav>
 
-    <header class="hero">
+    <header class="hero" id="top">
 
-      <div class="logo-stage">
-        <div class="logo-frame">
-          <img
-            src="images/logo.jpeg"
-            alt="Logo Mobily DZ"
-          >
+      <div>
+        <div class="hero-meta">
+
+          <div class="logo-chip">
+            <img
+              src="images/logo.jpeg"
+              alt="Logo Mobily DZ"
+            >
+          </div>
+
+          <p class="hero-note">
+            <strong>Connected life</strong>
+            Smartphones, accessoires et nouveautés
+            sélectionnés pour vous.
+          </p>
+
         </div>
+
+        <h1 class="hero-title">
+          <span class="mobily">Mobily</span>
+          <span class="dz">DZ</span>
+        </h1>
       </div>
 
-      <p class="eyebrow">
-        Smartphones · Accessoires · Innovation
-      </p>
+      <div class="hero-bottom">
 
-      <h1>MOBILY<span>DZ</span></h1>
+        <p class="hero-copy">
+          <b>La technologie, plus proche de vous.</b>
+          Découvrez l’univers Mobily DZ et retrouvez
+          nos équipes dans quatre adresses à Alger.
+        </p>
 
-      <p class="hero-text">
-        Votre destination tech en Algérie pour découvrir
-        smartphones, accessoires et nouveautés, dans quatre
-        magasins à votre service.
-      </p>
+        <div class="action-rail">
 
-      <div class="status-row">
-        <span class="status-pill">
-          <i></i>
-          4 magasins
-        </span>
+          <a
+            class="primary-action"
+            href="https://www.mobilydz.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explorer le catalogue
 
-        <span class="status-pill">
-          <i></i>
-          Conseil & service
-        </span>
+            <svg viewBox="0 0 24 24">
+              <path d="M5 12h14"></path>
+              <path d="M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
 
-        <span class="status-pill">
-          <i></i>
-          Nouveautés
-        </span>
+          <a
+            class="secondary-action"
+            href="tel:+213551436030"
+          >
+            Appeler
+
+            <svg viewBox="0 0 24 24">
+              <path d="M7.2 3.6 10 8 8.1 9.9a14.7 14.7 0 0 0 6 6L16 14l4.4 2.8"></path>
+            </svg>
+          </a>
+
+        </div>
       </div>
 
     </header>
 
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Smartphones</span>
+        <span>Accessoires</span>
+        <span>New arrivals</span>
+        <span>Four stores</span>
+        <span>Mobily DZ</span>
+
+        <span>Smartphones</span>
+        <span>Accessoires</span>
+        <span>New arrivals</span>
+        <span>Four stores</span>
+        <span>Mobily DZ</span>
+      </div>
+    </div>
+
     <section
-      class="main-actions"
-      aria-label="Actions principales"
+      class="section"
+      aria-labelledby="lookTitle"
     >
 
-      <a
-        class="action-card primary"
-        href="https://www.mobilydz.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span class="icon-box">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+      <div class="section-head">
+        <span class="section-number">01</span>
+
+        <h2 id="lookTitle">
+          The mobile edit.
+        </h2>
+
+        <p>
+          Une sélection qui change avec vos arrivages
+        </p>
+      </div>
+
+      <div class="lookbook-wrap">
+
+        <div class="lookbook" id="lookbook">
+
+          <article
+            class="look-card"
+            data-index="01 / 04"
+            style="--photo: url('images/product1.jpeg')"
+          >
+            <div class="look-content">
+              <small>Smartphones</small>
+              <h3>La nouvelle génération.</h3>
+
+              <p>
+                Présentez ici votre modèle phare ou
+                votre dernier arrivage.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="look-card"
+            data-index="02 / 04"
+            style="--photo: url('images/product2.jpeg')"
+          >
+            <div class="look-content">
+              <small>New drop</small>
+
+              <h3>
+                Des performances qui comptent.
+              </h3>
+
+              <p>
+                Une vitrine immersive pour vos nouveautés
+                et vos meilleures ventes.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="look-card"
+            data-index="03 / 04"
+            style="--photo: url('images/product3.jpeg')"
+          >
+            <div class="look-content">
+              <small>Accessories</small>
+
+              <h3>
+                Tout votre univers mobile.
+              </h3>
+
+              <p>
+                Protection, audio, charge et accessoires
+                indispensables.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="look-card"
+            data-index="04 / 04"
+            style="--photo: url('images/product4.jpeg')"
+          >
+            <div class="look-content">
+              <small>Mobily offers</small>
+
+              <h3>
+                Les offres à ne pas manquer.
+              </h3>
+
+              <p>
+                Mettez en avant vos promotions avec
+                une image et un message court.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="gallery-nav">
+
+          <span class="counter">
+            <b id="currentSlide">01</b> / 04
+          </span>
+
+          <div class="nav-buttons">
+
+            <button
+              id="previousButton"
+              aria-label="Produit précédent"
+            >
+              ←
+            </button>
+
+            <button
+              id="nextButton"
+              aria-label="Produit suivant"
+            >
+              →
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section
+      class="section"
+      aria-labelledby="storesTitle"
+    >
+
+      <div class="section-head">
+        <span class="section-number">02</span>
+
+        <h2 id="storesTitle">
+          Find your store.
+        </h2>
+
+        <p>
+          Quatre adresses à Alger
+        </p>
+      </div>
+
+      <div class="stores">
+
+        <a
+          class="store-row"
+          href="https://maps.app.goo.gl/ZzXu4xoEUg95w5ne8?g_st=ic"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="store-index">01</span>
+
+          <span class="store-name">
+            <strong>Belfort</strong>
+            <small>Voir l’itinéraire</small>
+          </span>
+
+          <span class="store-go">↗</span>
+        </a>
+
+        <a
+          class="store-row"
+          href="https://maps.app.goo.gl/J3exJ4mZ2Hx1Wm666?g_st=ic"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="store-index">02</span>
+
+          <span class="store-name">
+            <strong>El Biar</strong>
+            <small>Voir l’itinéraire</small>
+          </span>
+
+          <span class="store-go">↗</span>
+        </a>
+
+        <a
+          class="store-row"
+          href="https://maps.app.goo.gl/Sw4NCspZGszjBr7U9?g_st=ic"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="store-index">03</span>
+
+          <span class="store-name">
+            <strong>Dely Brahim</strong>
+            <small>Voir l’itinéraire</small>
+          </span>
+
+          <span class="store-go">↗</span>
+        </a>
+
+        <a
+          class="store-row"
+          href="https://maps.app.goo.gl/yBR5TefyUXZVA4HZ8?g_st=ic"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="store-index">04</span>
+
+          <span class="store-name">
+            <strong>City Center</strong>
+            <small>Voir l’itinéraire</small>
+          </span>
+
+          <span class="store-go">↗</span>
+        </a>
+
+      </div>
+    </section>
+
+    <section
+      class="section"
+      aria-labelledby="contactTitle"
+    >
+
+      <div class="section-head">
+        <span class="section-number">03</span>
+
+        <h2 id="contactTitle">
+          Direct lines.
+        </h2>
+
+        <p>
+          Choisissez une ligne et appelez
+        </p>
+      </div>
+
+      <div class="switchboard">
+
+        <div class="contact-pair">
+
+          <a
+            class="phone-link"
+            href="tel:+213551436030"
+          >
+            <small>Line 01</small>
+            <strong>0551 43 60 30</strong>
+          </a>
+
+          <a
+            class="phone-link"
+            href="tel:+213793478016"
+          >
+            <small>Line 02</small>
+            <strong>0793 47 80 16</strong>
+          </a>
+
+        </div>
+
+        <div class="contact-pair">
+
+          <a
+            class="phone-link"
+            href="tel:+213558072546"
+          >
+            <small>Line 03</small>
+            <strong>0558 07 25 46</strong>
+          </a>
+
+          <a
+            class="phone-link"
+            href="tel:+213774705946"
+          >
+            <small>Line 04</small>
+            <strong>0774 70 59 46</strong>
+          </a>
+
+        </div>
+
+        <div class="contact-pair">
+
+          <a
+            class="phone-link"
+            href="tel:+213553817939"
+          >
+            <small>Line 05</small>
+            <strong>0553 81 79 39</strong>
+          </a>
+
+          <a
+            class="phone-link"
+            href="tel:+213775138855"
+          >
+            <small>Line 06</small>
+            <strong>0775 13 88 55</strong>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section
+      class="section"
+      aria-labelledby="socialTitle"
+    >
+
+      <div class="section-head">
+        <span class="section-number">04</span>
+
+        <h2 id="socialTitle">
+          Stay connected.
+        </h2>
+
+        <p>
+          Suivez toutes nos nouveautés
+        </p>
+      </div>
+
+      <div class="social-ribbon">
+
+        <a
+          class="social-link instagram"
+          href="https://www.instagram.com/mobilydz"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <rect
+              x="3"
+              y="3"
+              width="18"
+              height="18"
+              rx="5"
+            ></rect>
+
+            <circle
+              cx="12"
+              cy="12"
+              r="4"
+            ></circle>
+
+            <circle
+              cx="17.4"
+              cy="6.6"
+              r="1"
+              fill="currentColor"
+              stroke="none"
+            ></circle>
+          </svg>
+
+          <span>Instagram</span>
+        </a>
+
+        <a
+          class="social-link tiktok"
+          href="https://www.tiktok.com/@mobilydz1?_r=1&amp;_t=ZS-98pGSYPMIsP"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M15.6 3c.4 2.2 1.7 3.5 3.9 3.7v3.1a8.2 8.2 0 0 1-3.8-1v6.1a6 6 0 1 1-5.1-5.9v3.2a2.9 2.9 0 1 0 2 2.7V3h3Z"></path>
+          </svg>
+
+          <span>TikTok</span>
+        </a>
+
+        <a
+          class="social-link facebook"
+          href="https://www.facebook.com/share/1EYHRMiBYi/?mibextid=wwXIfr"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M14 21v-8h2.8l.4-3H14V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V10H8v3h2.6v8H14Z"></path>
+          </svg>
+
+          <span>Facebook</span>
+        </a>
+
+        <a
+          class="social-link web"
+          href="https://www.mobilydz.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Site officiel"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
             <circle cx="12" cy="12" r="9"></circle>
             <path d="M3 12h18"></path>
             <path d="M12 3c3 3.4 3 14.6 0 18"></path>
             <path d="M12 3c-3 3.4-3 14.6 0 18"></path>
           </svg>
-        </span>
 
-        <span class="action-label">
-          <small>Catalogue & offres</small>
-          <strong>Visiter le site officiel</strong>
-        </span>
-
-        <span class="arrow">↗</span>
-      </a>
-
-      <a
-        class="action-card"
-        href="tel:+213551436030"
-      >
-        <span class="icon-box">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7.2 3.6 10 8 8.1 9.9a14.7 14.7 0 0 0 6 6L16 14l4.4 2.8-.9 3.1c-.2.7-.9 1.1-1.6 1.1C9.7 20.5 3.5 14.3 3 6.1c0-.7.4-1.4 1.1-1.6l3.1-.9Z"></path>
-          </svg>
-        </span>
-
-        <span class="action-label">
-          <small>Contact direct</small>
-          <strong>Appeler Mobily DZ</strong>
-        </span>
-
-        <span class="arrow">↗</span>
-      </a>
-
-    </section>
-
-    <section
-      class="panel gallery-section"
-      aria-labelledby="galleryTitle"
-    >
-
-      <div class="section-heading">
-
-        <div>
-          <span>À DÉCOUVRIR</span>
-          <h2 id="galleryTitle">Nos nouveautés</h2>
-        </div>
-
-        <div class="gallery-controls">
-          <button
-            id="previousButton"
-            aria-label="Produit précédent"
-          >
-            ←
-          </button>
-
-          <button
-            id="nextButton"
-            aria-label="Produit suivant"
-          >
-            →
-          </button>
-        </div>
-
-      </div>
-
-      <div
-        class="product-gallery"
-        id="productGallery"
-      >
-
-        <article
-          class="product-card"
-          style="--image: url('images/product1.jpeg')"
-        >
-          <div class="product-info">
-            <small>Smartphones</small>
-            <strong>Derniers modèles</strong>
-            <p>
-              Découvrez les derniers smartphones disponibles
-              chez Mobily DZ.
-            </p>
-          </div>
-        </article>
-
-        <article
-          class="product-card"
-          style="--image: url('images/product2.jpeg')"
-        >
-          <div class="product-info">
-            <small>Arrivages</small>
-            <strong>Nouveautés Mobily</strong>
-            <p>
-              Retrouvez les nouveaux arrivages disponibles
-              dans nos magasins.
-            </p>
-          </div>
-        </article>
-
-        <article
-          class="product-card"
-          style="--image: url('images/product3.jpeg')"
-        >
-          <div class="product-info">
-            <small>Accessoires</small>
-            <strong>Votre univers mobile</strong>
-            <p>
-              Accessoires et produits pour compléter votre
-              expérience mobile.
-            </p>
-          </div>
-        </article>
-
-        <article
-          class="product-card"
-          style="--image: url('images/product4.jpeg')"
-        >
-          <div class="product-info">
-            <small>Offres</small>
-            <strong>Les bons plans</strong>
-            <p>
-              Découvrez les promotions et les offres du moment.
-            </p>
-          </div>
-        </article>
-
-      </div>
-
-      <div
-        class="gallery-dots"
-        id="galleryDots"
-      ></div>
-
-    </section>
-
-    <section
-      class="panel branches-section"
-      aria-labelledby="branchesTitle"
-    >
-
-      <div class="section-heading">
-        <div>
-          <span>PLUS PROCHE DE VOUS</span>
-          <h2 id="branchesTitle">Nos magasins</h2>
-        </div>
-      </div>
-
-      <div class="branch-grid">
-
-        <a
-          class="branch-card"
-          href="https://maps.app.goo.gl/ZzXu4xoEUg95w5ne8?g_st=ic"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="branch-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-              <circle cx="12" cy="10" r="2.5"></circle>
-            </svg>
-          </span>
-
-          <span class="branch-info">
-            <strong>Belfort</strong>
-            <small>Ouvrir dans Maps</small>
-          </span>
-
-          <span class="branch-arrow">↗</span>
-        </a>
-
-        <a
-          class="branch-card"
-          href="https://maps.app.goo.gl/J3exJ4mZ2Hx1Wm666?g_st=ic"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="branch-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-              <circle cx="12" cy="10" r="2.5"></circle>
-            </svg>
-          </span>
-
-          <span class="branch-info">
-            <strong>El Biar</strong>
-            <small>Ouvrir dans Maps</small>
-          </span>
-
-          <span class="branch-arrow">↗</span>
-        </a>
-
-        <a
-          class="branch-card"
-          href="https://maps.app.goo.gl/Sw4NCspZGszjBr7U9?g_st=ic"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="branch-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-              <circle cx="12" cy="10" r="2.5"></circle>
-            </svg>
-          </span>
-
-          <span class="branch-info">
-            <strong>Dely Brahim</strong>
-            <small>Ouvrir dans Maps</small>
-          </span>
-
-          <span class="branch-arrow">↗</span>
-        </a>
-
-        <a
-          class="branch-card"
-          href="https://maps.app.goo.gl/yBR5TefyUXZVA4HZ8?g_st=ic"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="branch-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-              <circle cx="12" cy="10" r="2.5"></circle>
-            </svg>
-          </span>
-
-          <span class="branch-info">
-            <strong>City Center</strong>
-            <small>Ouvrir dans Maps</small>
-          </span>
-
-          <span class="branch-arrow">↗</span>
+          <span>Website</span>
         </a>
 
       </div>
-
-    </section>
-
-    <section
-      class="panel phones-section"
-      aria-labelledby="phonesTitle"
-    >
-
-      <div class="section-heading">
-        <div>
-          <span>CONTACT DIRECT</span>
-          <h2 id="phonesTitle">Appelez-nous</h2>
-        </div>
-      </div>
-
-      <div class="phone-grid">
-
-        <a
-          class="phone-card"
-          href="tel:+213551436030"
-        >
-          <span class="phone-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M7.2 3.6 10 8 8.1 9.9a14.7 14.7 0 0 0 6 6L16 14l4.4 2.8"></path>
-            </svg>
-          </span>
-
-          <span>
-            <small>Ligne 01</small>
-            <strong>0551 43 60 30</strong>
-          </span>
-        </a>
-
-        <a
-          class="phone-card"
-          href="tel:+213793478016"
-        >
-          <span class="phone-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M7.2 3.6 10 8 8.1 9.9a14.7 14.7 0 0 0 6 6L16 14l4.4 2.8"></path>
-            </svg>
-          </span>
-
-          <span>
-            <small>Ligne 02</small>
-            <strong>0793 47 80 16</strong>
-          </span>
-        </a>
-
-        <a
-          class="phone-card"
-          href="tel:+213558072546"
-        >
-          <span class="phone-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M7.2 3.6 10 8 8.1 9.9a14.7 14.7 0 0 0 6 6L16 14l4.4 2.8"></path>
-            </svg>
-          </span>
-
-          <span>
-            <small>Ligne 03</small>
-            <strong>0558 07 25 46</strong>
-          </span>
-        </a>
-
-        <a
-          class="phone-card"
-          href="tel:+213774705946"
-        >
-          <span class="phone-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M7.2 3.6 10 8 8.1 9.9a14.7 14.7 0 0 0 6 6L16 14l4.4 2.8"></path>
-            </svg>
-          </span>
-
-          <span>
-            <small>Ligne 04</small>
-            <strong>0774 70 59 46</strong>
-          </span>
-        </a>
-
-        <a
-          class="phone-card"
-          href="tel:+213553817939"
-        >
-          <span class="phone-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M7.2 3.6 10 8 8.1 9.9a14.7 14.7 0 0 0 6 6L16 14l4.4 2.8"></path>
-            </svg>
-          </span>
-
-          <span>
-            <small>Ligne 05</small>
-            <strong>0553 81 79 39</strong>
-          </span>
-        </a>
-
-        <a
-          class="phone-card"
-          href="tel:+213775138855"
-        >
-          <span class="phone-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M7.2 3.6 10 8 8.1 9.9a14.7 14.7 0 0 0 6 6L16 14l4.4 2.8"></path>
-            </svg>
-          </span>
-
-          <span>
-            <small>Ligne 06</small>
-            <strong>0775 13 88 55</strong>
-          </span>
-        </a>
-
-      </div>
-
-    </section>
-
-    <section
-      class="panel social-section"
-      aria-labelledby="socialTitle"
-    >
-
-      <div class="section-heading">
-        <div>
-          <span>RESTEZ CONNECTÉ</span>
-          <h2 id="socialTitle">Suivez Mobily DZ</h2>
-        </div>
-      </div>
-
-      <div class="social-grid">
-
-        <a
-          class="social-card instagram"
-          href="https://www.instagram.com/mobilydz"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="social-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.9"
-            >
-              <rect
-                x="3"
-                y="3"
-                width="18"
-                height="18"
-                rx="5"
-              ></rect>
-
-              <circle
-                cx="12"
-                cy="12"
-                r="4"
-              ></circle>
-
-              <circle
-                cx="17.4"
-                cy="6.6"
-                r="1"
-                fill="currentColor"
-                stroke="none"
-              ></circle>
-            </svg>
-          </span>
-
-          <span class="social-info">
-            <strong>Instagram</strong>
-            <small>@mobilydz</small>
-          </span>
-
-          <span class="social-arrow">↗</span>
-        </a>
-
-        <a
-          class="social-card tiktok"
-          href="https://www.tiktok.com/@mobilydz1?_r=1&amp;_t=ZS-98pGSYPMIsP"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="social-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M15.6 3c.4 2.2 1.7 3.5 3.9 3.7v3.1a8.2 8.2 0 0 1-3.8-1v6.1a6 6 0 1 1-5.1-5.9v3.2a2.9 2.9 0 1 0 2 2.7V3h3Z"></path>
-            </svg>
-          </span>
-
-          <span class="social-info">
-            <strong>TikTok</strong>
-            <small>@mobilydz1</small>
-          </span>
-
-          <span class="social-arrow">↗</span>
-        </a>
-
-        <a
-          class="social-card facebook"
-          href="https://www.facebook.com/share/1EYHRMiBYi/?mibextid=wwXIfr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="social-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M14 21v-8h2.8l.4-3H14V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V10H8v3h2.6v8H14Z"></path>
-            </svg>
-          </span>
-
-          <span class="social-info">
-            <strong>Facebook</strong>
-            <small>Mobily DZ</small>
-          </span>
-
-          <span class="social-arrow">↗</span>
-        </a>
-
-        <a
-          class="social-card website"
-          href="https://www.mobilydz.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="social-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.9"
-            >
-              <circle cx="12" cy="12" r="9"></circle>
-              <path d="M3 12h18"></path>
-              <path d="M12 3c3 3.4 3 14.6 0 18"></path>
-              <path d="M12 3c-3 3.4-3 14.6 0 18"></path>
-            </svg>
-          </span>
-
-          <span class="social-info">
-            <strong>Site officiel</strong>
-            <small>mobilydz.com</small>
-          </span>
-
-          <span class="social-arrow">↗</span>
-        </a>
-
-      </div>
-
     </section>
 
     <footer>
-      <div class="footer-line"></div>
-      <p>Mobily DZ</p>
-      <span>
-        Smartphones · Accessoires · Technologie
-      </span>
+
+      <div>
+        <strong>Mobily DZ</strong>
+
+        <small>
+          Smartphones · Accessoires · Innovation
+        </small>
+      </div>
+
+      <span class="footer-mark">M.</span>
+
     </footer>
 
   </main>
 
-  <div
-    class="toast"
-    id="toast"
-  >
+  <div class="toast" id="toast">
     Lien copié
   </div>
 
   <script>
     const gallery =
-      document.getElementById("productGallery");
+      document.getElementById("lookbook");
 
-    const products =
+    const slides =
       Array.from(
-        document.querySelectorAll(".product-card")
+        document.querySelectorAll(".look-card")
       );
 
-    const dotsContainer =
-      document.getElementById("galleryDots");
+    const currentSlide =
+      document.getElementById("currentSlide");
 
     const previousButton =
       document.getElementById("previousButton");
@@ -1662,94 +1456,79 @@
     const toast =
       document.getElementById("toast");
 
-    let currentProduct = 0;
-    let autoplay;
-    let scrollTimer;
+    let activeIndex = 0;
+    let timer;
+    let scrollEnd;
 
-    products.forEach((product, index) => {
-      const dot = document.createElement("i");
+    function showSlide(index) {
+      activeIndex =
+        (index + slides.length) % slides.length;
 
-      if (index === 0) {
-        dot.classList.add("active");
-      }
-
-      dotsContainer.appendChild(dot);
-    });
-
-    const dots =
-      Array.from(dotsContainer.children);
-
-    function updateDots(index) {
-      dots.forEach((dot, dotIndex) => {
-        dot.classList.toggle(
-          "active",
-          dotIndex === index
-        );
-      });
-    }
-
-    function showProduct(index, smooth = true) {
-      currentProduct =
-        (index + products.length) % products.length;
-
-      products[currentProduct].scrollIntoView({
-        behavior: smooth ? "smooth" : "auto",
+      slides[activeIndex].scrollIntoView({
+        behavior: "smooth",
         block: "nearest",
         inline: "center"
       });
 
-      updateDots(currentProduct);
+      currentSlide.textContent =
+        String(activeIndex + 1).padStart(2, "0");
     }
 
-    function startAutoplay() {
-      clearInterval(autoplay);
+    function restart() {
+      clearInterval(timer);
 
-      autoplay = setInterval(() => {
-        showProduct(currentProduct + 1);
-      }, 4700);
+      timer = setInterval(() => {
+        showSlide(activeIndex + 1);
+      }, 5200);
     }
 
-    nextButton.addEventListener("click", () => {
-      showProduct(currentProduct + 1);
-      startAutoplay();
-    });
+    previousButton.addEventListener(
+      "click",
+      () => {
+        showSlide(activeIndex - 1);
+        restart();
+      }
+    );
 
-    previousButton.addEventListener("click", () => {
-      showProduct(currentProduct - 1);
-      startAutoplay();
-    });
+    nextButton.addEventListener(
+      "click",
+      () => {
+        showSlide(activeIndex + 1);
+        restart();
+      }
+    );
 
     gallery.addEventListener(
       "scroll",
       () => {
-        clearTimeout(scrollTimer);
+        clearTimeout(scrollEnd);
 
-        scrollTimer = setTimeout(() => {
-          const galleryCenter =
+        scrollEnd = setTimeout(() => {
+          const center =
             gallery.scrollLeft +
             gallery.clientWidth / 2;
 
-          let nearestIndex = 0;
-          let nearestDistance = Infinity;
+          let nearest = 0;
+          let distance = Infinity;
 
-          products.forEach((product, index) => {
-            const productCenter =
-              product.offsetLeft +
-              product.offsetWidth / 2;
+          slides.forEach((slide, index) => {
+            const slideCenter =
+              slide.offsetLeft +
+              slide.offsetWidth / 2;
 
-            const distance =
-              Math.abs(
-                galleryCenter - productCenter
-              );
+            const nextDistance =
+              Math.abs(center - slideCenter);
 
-            if (distance < nearestDistance) {
-              nearestDistance = distance;
-              nearestIndex = index;
+            if (nextDistance < distance) {
+              distance = nextDistance;
+              nearest = index;
             }
           });
 
-          currentProduct = nearestIndex;
-          updateDots(currentProduct);
+          activeIndex = nearest;
+
+          currentSlide.textContent =
+            String(activeIndex + 1).padStart(2, "0");
         }, 90);
       },
       {
@@ -1760,19 +1539,19 @@
     shareButton.addEventListener(
       "click",
       async () => {
-        const shareData = {
+        const data = {
           title: "Mobily DZ",
           text:
-            "Découvrez Mobily DZ, ses produits et ses magasins.",
-          url: window.location.href
+            "Découvrez Mobily DZ et ses magasins.",
+          url: location.href
         };
 
         try {
           if (navigator.share) {
-            await navigator.share(shareData);
+            await navigator.share(data);
           } else {
             await navigator.clipboard.writeText(
-              window.location.href
+              location.href
             );
 
             toast.classList.add("show");
@@ -1783,10 +1562,7 @@
           }
         } catch (error) {
           if (error.name !== "AbortError") {
-            console.error(
-              "Partage impossible",
-              error
-            );
+            console.error(error);
           }
         }
       }
@@ -1796,14 +1572,14 @@
       "visibilitychange",
       () => {
         if (document.hidden) {
-          clearInterval(autoplay);
+          clearInterval(timer);
         } else {
-          startAutoplay();
+          restart();
         }
       }
     );
 
-    startAutoplay();
+    restart();
   </script>
 </body>
 </html>
